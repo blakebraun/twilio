@@ -2,10 +2,10 @@ const twilio = require('twilio');
 const axios = require('axios');
 const readline = require('readline');
 
-let accountSid = 'REPLACE_ME';
-let authToken = 'REPLACE_ME';
-let toNumber = 'REPLACE_ME';
-let fromNumber = 'REPLACE_ME';
+let accountSid = process.env.TWILIO_ACCOUNT_SID;
+let authToken = process.env.TWILIO_AUTH_TOKEN;
+let toNumber = process.env.TWILIO_TO_NUMBER;
+let fromNumber = process.env.TWILIO_FROM_NUMBER;
 
 let client = new twilio(accountSid, authToken);
 
